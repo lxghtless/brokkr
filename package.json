@@ -1,0 +1,44 @@
+{
+    "name": "@lxghtless/brokkr",
+    "version": "0.0.0",
+    "description": "A util module.",
+    "main": "lib/index.js",
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "lint": "eslint --fix \"lib/**/*.js\" \"test/**/*.js\"",
+        "pretest": "eslint \"lib/**/*.js\" \"test/**/*.js\"",
+        "test": "tap --reporter nyan test/*.test.js test/**/*.test.js",
+        "test:types": "tsd",
+        "clean": "rimraf dist coverage .nyc_output"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lxghtless/brokkr.git"
+    },
+    "keywords": [
+        "util"
+    ],
+    "author": "lxghtless",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lxghtless/bokkr/issues"
+    },
+    "homepage": "https://github.com/lxghtless/bokkr#readme",
+    "devDependencies": {
+        "@lxghtless/eslint-config-prettier": "^1.0.0",
+        "husky": "^4.3.8",
+        "rimraf": "^3.0.2",
+        "tap": "^14.11.0",
+        "tsd": "^0.14.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint"
+        }
+    }
+}
